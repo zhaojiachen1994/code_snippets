@@ -4,8 +4,8 @@ import re
 from icecream import ic
 
 # 代码模块的分类
-SECTIONS = ['plot'  # code for plt images
-
+SECTIONS = ['plot',  # code for plt images
+            'chatgpt'
             ]
 
 # 每个.md中所含的项

@@ -18,6 +18,7 @@ files = [x for x in os.listdir(video_path) if x.endswith(".MP4")]
 <summary><strong>  Matplotlib画图模板 </strong></summary>
 
 ```python
+    import matplotlib.pyplot as plt
     import matplotlib.patches as patches #用来画长方形
  
     t = np.linspace(1,100,100)
