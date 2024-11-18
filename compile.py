@@ -54,7 +54,14 @@ def write_md(contents, file):
                 f.write("\n")
             f.write("\n---\n\n")
 
-
+def write_README(file, titles):
+    with open(file, 'w', encoding='utf-8') as f:
+        f.write("# Code snippets \n\n")
+        for s in SECTIONS:
+            f.write(f"## {s} \n")
+            for title in titles[s]:
+                f.write(f"* {title} \n")
+            f.write("---\n")
 
 
 
@@ -63,11 +70,18 @@ if __name__ == "__main__":
     print('-----')
     # read markdowns
 
+    titles = {}
     for s in SECTIONS:
         files = sorted([f"lib/{s}/{x}" for x in os.listdir(f"lib/{s}") if x.endswith(".md")])
         contents = [read_md(file) for file in files]
         out_md = f"{s.lower()}.md"
         write_md(contents, out_md)
+        titles[s] = [content['TITLE'][0] for content in contents]
+    write_README('README.md', titles)
+
+
+
+
 
 
 

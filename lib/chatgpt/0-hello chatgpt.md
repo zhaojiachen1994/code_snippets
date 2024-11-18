@@ -1,5 +1,5 @@
 \TITLE
-Hello chatgpt.
+Hello chatgpt
 
 \END TITLE
 

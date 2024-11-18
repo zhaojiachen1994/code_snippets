@@ -1,5 +1,5 @@
 <details>
-<summary><strong>  Hello chatgpt. </strong></summary>
+<summary><strong>  Hello chatgpt </strong></summary>
 
 ```python
 import os
